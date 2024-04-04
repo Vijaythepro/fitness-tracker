@@ -1,0 +1,15 @@
+  <mat-toolbar color="primary">
+    <button mat-icon-button  (click)="onToggleClick()"aria-label="Example icon-button with menu icon">
+      <mat-icon >menu</mat-icon>   
+    </button>
+    <span> <a routerLink="/">Fitness Tracker</a></span>
+    <span class="example-spacer"></span>
+    <div>
+       <ul>
+            <li *ngIf="!isAuth"><a routerLink="/signup">sign up</a></li>
+            <li *ngIf="!isAuth"><a routerLink="/login">login</a></li>
+            <li *ngIf="isAuth"><a routerLink="/training">training</a></li>
+            <li *ngIf="isAuth"><a style="cursor: pointer" (click)="onLogout()">log out</a></li>
+      </ul>
+  </div>
+  </mat-toolbar> 
