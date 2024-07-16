@@ -1,0 +1,9 @@
+<mat-drawer-container class="container" [hasBackdrop]="true">
+  <mat-drawer #drawer >
+        <app-side-nav (sideNavClick)="drawer.toggle()"></app-side-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+        <app-header (menuClick)="drawer.toggle()"></app-header>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

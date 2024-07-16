@@ -1,0 +1,21 @@
+<mat-nav-list>
+    <a *ngIf="!isAuth" mat-list-item routerLink="/signup" (click)="onToggleClick()">
+        <mat-icon>group_add</mat-icon>
+        <span>sign up</span>
+    </a>
+    <a *ngIf="!isAuth" mat-list-item routerLink="/login" (click)="onToggleClick()">
+        <mat-icon>input</mat-icon>
+        <span>login</span>
+    </a>
+    <a *ngIf="isAuth" mat-list-item routerLink="/training" (click)="onToggleClick()">
+        <mat-icon>fitness_center</mat-icon>
+        <span>training</span>
+    </a>
+    <mat-list-item *ngIf="isAuth">
+        <button mat-icon-button (click)="onLogout()">
+                        <mat-icon>power_settings_new</mat-icon>
+                        <span>log out</span>
+        </button>
+    </mat-list-item>
+
+</mat-nav-list>
